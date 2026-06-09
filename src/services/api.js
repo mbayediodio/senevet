@@ -1,8 +1,23 @@
-import axios from 'axios';
+import products from "../data/products";
 
-const api = axios.create({
-  baseURL: '/api',
-});
+export const searchProducts = async (query) => {
+  return {
+    data: products.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    ),
+  };
+};
 
-export const searchProducts = (query) => api.get(`/products/search?q=${query}`);
-export const getProductByBarcode = (barcode) => api.get(`/products/barcode/${barcode}`);
+export const getProductByBarcode = async (barcode) => {
+  const product = products.find(
+    (p) => String(p.barcode) === String(barcode)
+  );
+
+  if (!product) {
+    throw new Error("Produit non trouvé");
+  }
+
+  return {
+    data: product,
+  };
+};
