@@ -1,12 +1,12 @@
-import actifloxImg from '../assets/actiflox.jfif';
-import amoxyvetImg from '../assets/amoxyvet.jfif';
+// import actifloxImg from '../assets/actiflox.jfif';
+// import amoxyvetImg from '../assets/amoxyvet.jfif';
 
 const products = [
   {
     id: 1,
     barcode: 'ACT001',
     name: 'ACTIFLOX',
-    image: actifloxImg,
+    // image: actifloxImg,
     category: 'Antibiotiques',
     description:
       'Traitement des infections respiratoires chez la volaille.',
@@ -21,7 +21,7 @@ const products = [
     id: 2,
     barcode: 'AMX002',
     name: 'AMOXYVET',
-    image: amoxyvetImg,
+    // image: amoxyvetImg,
     category: 'Antibiotiques',
     description:
       'Traitement et prévention des infections bactériennes.',
